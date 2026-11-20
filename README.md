@@ -1,5 +1,5 @@
 <div align="center">
-  <h1>Google Ai Kit™</h1>
+  <h1>Google Ai Kit By Anony™</h1>
   <p><em>Any Google Subscription Unlocked</em></p>
 </div>
 
