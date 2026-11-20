@@ -55,22 +55,25 @@ MuMuPlayer must be installed separately from the official site and started with 
 
 ### Windows
 
-```powershell
+```
+powershell
 git clone https://github.com/the-anonyyy/google-ai-verify.git
 cd google-ai-verify
 .\run-all.ps1
-
+```
 ### macOS
 
+```
 git clone https://github.com/the-anonyyy/google-ai-verify.git
 cd google-ai-verify
 adb devices
 sh run-macos.sh
+```
 
 The launchers install pinned dependencies (textual==8.2.8, frida==16.5.9) on first run when needed.
 
 
-Usage:
+## Usage:
 1.  Start MuMuPlayer (or compatible rooted Android) with root and ADB enabled, Google Play and Google One signed in.
 2.  Run the platform launcher(.\run-all.ps1 or sh run-macos.sh).
 3.  In the dashboard, select Check Device & Offers for Step 1 (lists offers, no checkout).
@@ -85,7 +88,7 @@ Steps 2–5 can open real Google Play checkout and may submit a subscription. Ve
 
 No central .env or JSON config is required for normal operation. Sensitive account lists belong in gitignored accounts.txt files.
 
-FAQ
+## FAQ
 Does Step 1 charge money?
 No. Step 1 only lists offers. Steps 2–5 can open real checkouts.
 Is MuMuPlayer included?
@@ -101,7 +104,8 @@ Use the dashboard Stop controls. Stop does not reverse a submitted Google Play c
 Support & Community
 Channel : https://t.me/CracKz_Hubb   (@CracKz_Hubb)
 Contact : https://t.me/Trusted_Liar_0  (@Trusted_Liar_0)
-Credits
+
+## Credits
 © 2026 Anony. All rights reserved.
 License
 MIT License. Copyright (c) 2026 Anony. See LICENSE.
