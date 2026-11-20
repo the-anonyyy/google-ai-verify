@@ -1,9 +1,0 @@
-{
-  "comment": "Google Ai Kit configuration template. The toolkit is primarily driven by CLI flags and the TUI. No central config file is required.",
-  "channel": "@CracKz_Hubb",
-  "contact": "@Trusted_Liar_0",
-  "frida_version": "16.5.9",
-  "textual_version": "8.2.8",
-  "adb_serial": "",
-  "account_email": ""
-}
