@@ -22,7 +22,7 @@
 - [FAQ](#faq)
 - [Support & Community](#support--community)
 - [Credits](#credits)
-- [License](#license)
+- [LICENSE](#license)
 
 ## Pitch
 
@@ -71,32 +71,77 @@ This toolkit requires a rooted Android environment (MuMuPlayer) connected via AD
    - Open Google Play Store, sign in with your Google account.
    - Open Google One (install it from Play Store if needed) and sign in with the same account.
    - 
-### Windows
+## 2. Repository Setup (Windows)
 
-```
-powershell
-git clone https://github.com/the-anonyyy/google-ai-verify.git
-cd google-ai-verify
-.\run-all.ps1
+1. **Install Prerequisites**
+   - **Python 3.10+**: Download from `python.org`. **IMPORTANT:** Check "Add Python to PATH" during installation.
+   - **Git**: Download from `git-scm.com`.
 
-### macOS
+2. **Clone Repo & Run**
+   - Open PowerShell (Windows Terminal).
+   - Run the following commands:
+     ```powershell
+     git clone https://github.com/the-anonyyy/google-ai-verify.git
+     cd google-ai-verify
+     .\run-all.ps1
+     ```
 
-```
-git clone https://github.com/the-anonyyy/google-ai-verify.git
-cd google-ai-verify
-adb devices
-sh run-macos.sh
-```
+3. **Initial Setup**
+   - On first run, the launcher will automatically install required Python packages (`textual`, `frida`).
+   - It will also locate or download ADB if not found in your PATH.
+   - The Textual Dashboard will open.
 
-The launchers install pinned dependencies (textual==8.2.8, frida==16.5.9) on first run when needed.
+4. **Connect Emulator**
+   - Ensure MuMuPlayer is running.
+   - Click **"Check Device & Offers"** in the dashboard (Step 1).
+   - If ADB is not connected, the toolkit will attempt to connect automatically to common MuMu ports (`127.0.0.1:16384`, etc.).
+   - Verify the device is detected in the Live Status panel.
 
+## 3. Repository Setup (macOS)
 
-## Usage:
-1.  Start MuMuPlayer (or compatible rooted Android) with root and ADB enabled, Google Play and Google One signed in.
-2.  Run the platform launcher - .\run-all.ps1 (for windows) or sh run-macos.sh ( for macos).
-3.  In the dashboard, select Check Device & Offers for Step 1 (lists offers, no checkout).
-4.  Review live status. Use advanced run modes only when intentionally selecting a specific stage.
-5.  For CLI on Windows: 
+1. **Install Prerequisites**
+   - **Python 3.10+**: Install via `brew install python` or download from `python.org`.
+   - **ADB**: Install via Homebrew: `brew install android-platform-tools`.
+   - **Git**: Install via Xcode Command Line Tools (`xcode-select --install`) or Homebrew.
+
+2. **Clone & Run**
+   - Open Terminal.
+   - Run the following commands:
+     ```bash
+     git clone https://github.com/the-anonyyy/google-ai-verify.git
+     cd google-ai-verify
+     adb devices
+     sh run-macos.sh
+     ```
+   - `adb devices` should list your emulator (e.g., `127.0.0.1:16384 device`). If not, start MuMuPlayer Pro and enable ADB.
+
+3. **Initial Setup**
+   - The launcher creates a local `.venv` and installs `textual` and `frida`.
+   - The Textual Dashboard will open in the terminal.
+     
+## 4. Dashboard Usage Workflow
+
+Once the dashboard is open and the emulator is connected:
+
+1. **Step 0 — Environment**
+   - Select **"Check Device & Offers"** or run the Environment stage.
+   - This verifies ADB, root access, and installs `frida-server` on the Android device.
+   - It also pushes the required billing module APK (`/data/local/tmp/module_521.apk`).
+
+2. **Step 1 — Available Offers**
+   - Select **"Check Device & Offers"** (or the List Offers stage).
+   - The toolkit injects Frida, queries the Google Play Billing API, and displays available offers (e.g., `12months-eft`).
+   - This step does **not** initiate a purchase.
+
+3. **Step 2–5 — Checkout (Warning: Real Charges Possible)**
+   - Select a specific stage (e.g., **Step 2 — Pro 12 months**).
+   - The toolkit launches the Google Play checkout sheet inside the emulator.
+   - **You must verify the price on the emulator screen.**
+   - If the price shows `$0.00` or "Free Trial", the toolkit will confirm the subscription. If it shows a real price, it will abort.
+   - **Important:** After each checkout step, verify the subscription status directly in Google Play inside the emulator.
+   - 
+   
+    For CLI on Windows: 
 .\run-all.ps1 -Step 1
 .\run-all.ps1 -Step 0
 .\run-all.ps1 -AllStages
@@ -107,18 +152,19 @@ Steps 2–5 can open real Google Play checkout and may submit a subscription. Ve
 No central .env or JSON config is required for normal operation. Sensitive account lists belong in gitignored accounts.txt files.
 
 ## FAQ
-Does Step 1 charge money?
-No. Step 1 only lists offers. Steps 2–5 can open real checkouts.
-Is MuMuPlayer included?
-No. Install it yourself from the official site.
-Can I use any Android emulator?
-A rooted, ADB-enabled instance is required. MuMuPlayer is the supported workflow on Windows.
-Where are logs?
-Technical logs in logs/, stage reports in ultra0-report/.
-Does the toolkit guarantee eligibility or free subscriptions?
-No. Verify every offer, charge, and renewal directly in Google Play.
-How do I stop a running stage?
-Use the dashboard Stop controls. Stop does not reverse a submitted Google Play checkout.
+Q) Does Step 1 charge money?
+A) No. Step 1 only lists offers. Steps 2–5 can open real checkouts.
+Q) Is MuMuPlayer included?
+A) No. Install it yourself from the official site.
+Q) Can I use any Android emulator?
+A) A rooted, ADB-enabled instance is required. MuMuPlayer is the supported workflow on Windows.
+Q) Where are logs?
+A) Technical logs in logs/, stage reports in ultra0-report/.
+Q) Does the toolkit guarantee eligibility or free subscriptions?
+A) No. Verify every offer, charge, and renewal directly in Google Play.
+Q) How do I stop a running stage?
+A) Use the dashboard Stop controls. Stop does not reverse a submitted Google Play checkout.
+
 Support & Community
 Channel : https://t.me/CracKz_Hubb   (@CracKz_Hubb)
 Contact : https://t.me/Trusted_Liar_0  (@Trusted_Liar_0)
@@ -126,7 +172,9 @@ Contact : https://t.me/Trusted_Liar_0  (@Trusted_Liar_0)
 ## Credits
 © 2026 Anony. All rights reserved.
 License
-MIT License. Copyright (c) 2026 Anony. See LICENSE.
+MIT License. 
+Copyright (c) 2026 Anony. 
+See LICENSE.
 
 Maintained by Anony · 2026
 Channel : https://t.me/CracKz_Hubb   (@CracKz_Hubb)
