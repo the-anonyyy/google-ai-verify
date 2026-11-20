@@ -49,10 +49,28 @@ Google Ai Kit is a terminal toolkit for Windows and macOS that inspects Google A
 | Frida | 16.5.9 (prepared by setup helper) | 16.5.9 (installed into `.venv`) |
 | Start command | `.\run-all.ps1` | `sh run-macos.sh` |
 
-MuMuPlayer must be installed separately from the official site and started with root and ADB enabled.
 
 ## Installation
+This toolkit requires a rooted Android environment (MuMuPlayer) connected via ADB to run Frida scripts. Follow these steps carefully.
 
+## 1. Emulator Setup (MuMuPlayer)
+
+1. **Download & Install MuMuPlayer**
+   - Go to the official MuMuPlayer website (NetEase).
+   - Download the Windows or Mac (Apple Silicon) installer.
+   - Install it and launch the emulator.
+
+2. **Enable Root & ADB**
+   - Open MuMuPlayer settings (gear icon).
+   - Go to **"Root Permission"** and turn it **ON**.
+   - Go to **"ADB Debugging"** and turn it **ON**.
+   - Restart the emulator instance to apply changes.
+
+3. **Install Google Apps**
+   - MuMuPlayer usually comes with Google Play Store pre-installed. If not, use the MuMu Store to install it.
+   - Open Google Play Store, sign in with your Google account.
+   - Open Google One (install it from Play Store if needed) and sign in with the same account.
+   - 
 ### Windows
 
 ```
@@ -60,7 +78,7 @@ powershell
 git clone https://github.com/the-anonyyy/google-ai-verify.git
 cd google-ai-verify
 .\run-all.ps1
-```
+
 ### macOS
 
 ```
@@ -75,7 +93,7 @@ The launchers install pinned dependencies (textual==8.2.8, frida==16.5.9) on fir
 
 ## Usage:
 1.  Start MuMuPlayer (or compatible rooted Android) with root and ADB enabled, Google Play and Google One signed in.
-2.  Run the platform launcher(.\run-all.ps1 or sh run-macos.sh).
+2.  Run the platform launcher - .\run-all.ps1 (for windows) or sh run-macos.sh ( for macos).
 3.  In the dashboard, select Check Device & Offers for Step 1 (lists offers, no checkout).
 4.  Review live status. Use advanced run modes only when intentionally selecting a specific stage.
 5.  For CLI on Windows: 
