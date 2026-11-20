@@ -1,0 +1,74 @@
+# Credentials and local account data
+accounts.txt
+accounts-*.txt
+accounts-*.csv
+accounts-*.json
+*.credentials
+*.secrets
+*.secret
+*.token
+*.key
+*.pem
+.env
+.env.*
+!.env.example
+config.local.*
+*.local.json
+
+# Runtime output
+ultra0-report/
+reports/
+logs/
+screenshots/
+captures/
+*.log
+*.trace
+*.dmp
+*.hprof
+*.prof
+
+# Downloaded tools and artifacts
+platform-tools/
+*.apk
+*.aab
+*.dex
+*.zip
+*.7z
+*.tmp
+*.temp
+*.bak
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.tox/
+.nox/
+.coverage
+.coverage.*
+htmlcov/
+coverage/
+dist/
+build/
+*.egg-info/
+
+# Editors and OS
+.vscode/
+.idea/
+.vs/
+.DS_Store
+Thumbs.db
+Desktop.ini
+*.swp
+*.swo
+*~
+
+# Optional
+node_modules/
+test-results/
+*.png
