@@ -16,15 +16,16 @@
 - [What it does](#what-it-does)
 - [Requirements](#requirements)
 - [Installation](#installation)
-- [Usage](#usage)
-- [Configuration](#configuration)
-- [Troubleshooting](#troubleshooting)
+  - [1. Emulator Setup (MuMuPlayer)](#1-emulator-setup-mumuplayer)
+  - [2. Repository Setup (Windows)](#2-repository-setup-windows)
+  - [3. Repository Setup (macOS)](#3-repository-setup-macos)
+  - [4. Dashboard Usage Workflow](#4-dashboard-usage-workflow)
 - [FAQ](#faq)
 - [Support & Community](#support--community)
 - [Credits](#credits)
-- [LICENSE](#license)
+- [License](#license)
 
-## Pitch
+## Info
 
 Google Ai Kit is a terminal toolkit for Windows and macOS that inspects Google AI Pro offers through a rooted Android environment, ADB, Frida, and Google Play. It provides a Textual dashboard and CLI for listing available offers and guiding through subscription stages.
 
@@ -165,17 +166,16 @@ A) No. Verify every offer, charge, and renewal directly in Google Play.
 Q) How do I stop a running stage?
 A) Use the dashboard Stop controls. Stop does not reverse a submitted Google Play checkout.
 
-Support & Community
+## Support & Community
 Channel : https://t.me/CracKz_Hubb   (@CracKz_Hubb)
+Group : https://t.me/Crackz_Hub   (@Crackz_Hub)
 Contact : https://t.me/Trusted_Liar_0  (@Trusted_Liar_0)
 
 ## Credits
 © 2026 Anony. All rights reserved.
-License
-MIT License. 
-Copyright (c) 2026 Anony. 
-See LICENSE.
-
-Maintained by Anony · 2026
 Channel : https://t.me/CracKz_Hubb   (@CracKz_Hubb)
 Contact : https://t.me/Trusted_Liar_0  (@Trusted_Liar_0)
+
+## License
+MIT License. 
+Copyright (c) 2026 Anony. 
