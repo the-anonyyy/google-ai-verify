@@ -1,3 +1,4 @@
+from __future__ import annotations
 # Google Ai Kit™ - TUI Dashboard
 # Anony · t.me/CracKz_Hubb
 import os

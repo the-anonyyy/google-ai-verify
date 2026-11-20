@@ -18,6 +18,7 @@ Requirements:
 WARNING: non-list mode can open Google Play checkout and tap Subscribe.
 Offer metadata does not prove eligibility or subscription activation.
 """
+from __future__ import annotations
 import argparse, base64, hashlib, hmac, json, os, re, struct, subprocess, sys, threading, time
 import shlex
 from pathlib import Path

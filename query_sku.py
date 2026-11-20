@@ -1,3 +1,4 @@
+from __future__ import annotations
 # Google Ai Kit™ - SKU Query Tool
 import json
 import sys

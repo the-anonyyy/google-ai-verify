@@ -1,3 +1,4 @@
+from __future__ import annotations
 # Google Ai Kit™ - Device Selector
 import subprocess
 import sys

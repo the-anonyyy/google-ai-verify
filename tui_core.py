@@ -1,3 +1,4 @@
+from __future__ import annotations
 # Google Ai Kit™ - TUI Core
 # Anony t.me/Trusted_Liar_0 · t.me/CracKz_Hubb
 import ultra0
