@@ -20,6 +20,7 @@
   - [2. Repository Setup (Windows)](#2-repository-setup-windows)
   - [3. Repository Setup (macOS)](#3-repository-setup-macos)
   - [4. Dashboard Usage Workflow](#4-dashboard-usage-workflow)
+- [Troubleshooting: Google Flagged Transaction (OR-REH-04)](#troubleshooting-google-flagged-transaction-or-reh-04)
 - [FAQ](#faq)
 - [Support & Community](#support--community)
 - [Credits](#credits)
@@ -156,16 +157,16 @@ No central .env or JSON config is required for normal operation. Sensitive accou
 
 If your checkout fails with a payment security block, it means Google Play has flagged your emulator or network. **Make sure to use no VPN.** Follow these steps to clean your environment:
 
-# 1. Emulator Fingerprint (The biggest issue)
+**1. Emulator Fingerprint (The biggest issue)**
 Google is able to detect MuMuPlayer. Go to MuMu settings:
 * **Change the Device Model** (e.g., Samsung Galaxy S23, Pixel 7, or any real phone).
 * **Reset the IMEI and Android ID** (it should look like a new device).
 
-# 2. Change Network and IP
+**2. Change Network and IP**
 * If any VPN or Proxy is running on your Mac/PC, **turn it off**.
 * Change the emulator’s IP address (connect via a mobile hotspot or a different network). Google instantly blocks datacenter IPs and free VPNs.
 
-# 3. Clear Play Store and Play Services Data
+**3. Clear Play Store and Play Services Data**
 Go inside the emulator:
 * Settings → Apps → **Google Play Store** → **Clear Data / Clear Cache**.
 * Settings → Apps → **Google Play Services** → **Clear Data / Clear Cache**.
