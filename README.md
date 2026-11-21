@@ -156,24 +156,21 @@ No central .env or JSON config is required for normal operation. Sensitive accou
 
 If your checkout fails with a payment security block, it means Google Play has flagged your emulator or network. **Make sure to use no VPN.** Follow these steps to clean your environment:
 
-### 1. Emulator Fingerprint (The biggest issue)
+# 1. Emulator Fingerprint (The biggest issue)
 Google is able to detect MuMuPlayer. Go to MuMu settings:
 * **Change the Device Model** (e.g., Samsung Galaxy S23, Pixel 7, or any real phone).
 * **Reset the IMEI and Android ID** (it should look like a new device).
 
-### 2. Change Network and IP
+# 2. Change Network and IP
 * If any VPN or Proxy is running on your Mac/PC, **turn it off**.
 * Change the emulator’s IP address (connect via a mobile hotspot or a different network). Google instantly blocks datacenter IPs and free VPNs.
 
-### 3. Clear Play Store and Play Services Data
+# 3. Clear Play Store and Play Services Data
 Go inside the emulator:
 * Settings → Apps → **Google Play Store** → **Clear Data / Clear Cache**.
 * Settings → Apps → **Google Play Services** → **Clear Data / Clear Cache**.
-* After that, **restart the emulator**. 
+* After that, **restart the ## 4. Account Region Requirement (USA)
 
-### 4. Account Region Requirement (USA)
-* The Google account signed into the emulator **must be a US-based account** with a valid USA billing address (e.g., ZIP `97201` or `10001`).
-* If your account is from another region (e.g., India, UK), Google Play will show local pricing, and the `12months-eft` offer will not appear.
 
 ## FAQ
 Q) Does Step 1 charge money?
