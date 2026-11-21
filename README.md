@@ -153,17 +153,17 @@ Steps 2–5 can open real Google Play checkout and may submit a subscription. Ve
 No central .env or JSON config is required for normal operation. Sensitive account lists belong in gitignored accounts.txt files.
 
 ## FAQ
-Q) Does Step 1 charge money?
+# Q) Does Step 1 charge money?
 A) No. Step 1 only lists offers. Steps 2–5 can open real checkouts.
-Q) Is MuMuPlayer included?
+# Q) Is MuMuPlayer included?
 A) No. Install it yourself from the official site.
-Q) Can I use any Android emulator?
+# Q) Can I use any Android emulator?
 A) A rooted, ADB-enabled instance is required. MuMuPlayer is the supported workflow on Windows.
-Q) Where are logs?
+# Q) Where are logs?
 A) Technical logs in logs/, stage reports in ultra0-report/.
-Q) Does the toolkit guarantee eligibility or free subscriptions?
+# Q) Does the toolkit guarantee eligibility or free subscriptions?
 A) No. Verify every offer, charge, and renewal directly in Google Play.
-Q) How do I stop a running stage?
+# Q) How do I stop a running stage?
 A) Use the dashboard Stop controls. Stop does not reverse a submitted Google Play checkout.
 
 ## Support & Community
