@@ -401,7 +401,9 @@ def ensure_module_apk():
         return
     note("Pushing billing module to Android (one-time setup)...")
     tmp = Path(tempfile.gettempdir()) / "module_521.apk"
-    tmp.write_bytes(base64.b64decode(MODULE_B64))
+    clean_b64 = "".join(MODULE_B64.split())
+    clean_b64 += "=" * ((4 - len(clean_b64) % 4) % 4)
+    tmp.write_bytes(base64.b64decode(clean_b64))
     sh("push", str(tmp), MODULE_REMOTE, timeout=120)
     ok("Billing module installed")
 
